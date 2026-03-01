@@ -8,60 +8,40 @@
 
     <style>
     *{margin: 0; padding: 0; box-sizing: content-box;}
-      .container{
-        display: grid;
-        grid-template-columns: 20vw 80vw;
-        grid-template-rows: 80px 1fr 80px;
-        grid-template-areas: 
-        "header header"
-        "siderea main"
-        "footer footer";
-        gap: 10px;
-        min-height: 100vh;
-      }
+      
 
-      .general-configuration{
-        padding: 1rem;
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color:white;
+      color: black;
+    }
+    .flex-container{
+      width: 80vw;
+      height: 40vh;
+      background-color: rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+    }
+    .flex-container h1{
+      font-size: 3vw;
+    }
+    @media screen and (orientation:portrait){
+      body{
+        background: black;
+        color: white;
       }
-      .main{
-        grid-area: main;
-        background-color: aqua;
+      .flex-container h1{
+      font-size: 4vw;
       }
-      .header{
-        grid-area: header;
-        background-color:aquamarine;
-        display: flex;
-        justify-content: center;
+      .flex-container{
+      background-color: rgba(255, 255, 255, 0.2);
       }
-      .footer{
-        grid-area: footer;
-        background-color:blanchedalmond;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr;
-        
-      }
-      .aside{
-        grid-area: siderea;
-        background-color:chartreuse
-      }
-   
-      @media(max-width: 740px){
-        .container{
-        display: grid;
-        grid-template-columns: 20vw 80vw;
-        grid-template-rows: 70px 1fr  auto 70px;
-        grid-template-areas: 
-        "header header"
-        "main main"
-        "siderea siderea"
-        "footer footer";
-        gap: 10px;
-        min-height: 100vh;
-      }
-      }
+    }
    </style>
 
   </head>
@@ -69,32 +49,10 @@
 
   <body>
     
-    <div class="container">
-      <header class="header general-configuration">
-        <h1>Site Name</h1>
-      </header>
-
-      <main class="main general-configuration">
-        <h2>Main content:</h2>
-      </main>
-      
-      <aside class="aside general-configuration">
-        <ul>
-          <h3>Sites</h3>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-          <li>Item 4</li>
-          <li>Item 5</li>
-        </ul>
-
-      </aside>
-
-     <footer class="footer">
-      <p>copy right 2026 | 📧 malek.sellama.dev@gmail.com</p>
-     </footer>
-
+    <div class="flex-container">
+      <h1>&#128231;Mail: contact@msellama.com</h1>
     </div>
+    
   </body>
 
 </html>
